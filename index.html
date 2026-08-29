@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NETWORKER</title>
+    <!-- FontAwesome იკონები -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <!-- ლოგო -->
+        <div class="logo">
+          <a href="index.html">NETWORKER</a>
+        </div>
+
+        <!-- მობილურის მენიუს ღილაკი -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- მთავარი ნავიგაცია -->
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">მთავარი</a></li>
+
+            <!-- MEGA MENU ELEMENT -->
+            <li class="nav-item has-mega-menu">
+              <a href="#"
+                >სერვისები <i class="fa-solid fa-chevron-down nav-arrow"></i
+              ></a>
+
+              <div class="mega-menu">
+                <div class="mega-menu-content">
+                  <div class="mega-column">
+                    <h4>საბუღალტრო აღრიცხვა</h4>
+                    <ul>
+                      <li><a href="#">სრული საბუღალტრო მომსახურება</a></li>
+                      <li><a href="#">საგადასახადო ანგარიშგება</a></li>
+                      <li><a href="#">ძველი პერიოდების აღდგენა</a></li>
+                      <li><a href="#">მთავარი ბუღალტრის მომსახურება</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-column">
+                    <h4>ფინანსური კონსულტაცია</h4>
+                    <ul>
+                      <li><a href="#">საგადასახადო ოპტიმიზაცია</a></li>
+                      <li><a href="#">ფინანსური აუდიტი</a></li>
+                      <li><a href="#">ბიუჯეტირება და დაგეგმარება</a></li>
+                      <li><a href="#">IFRS სტანდარტებთან შესაბამისობა</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-column">
+                    <h4>ბიზნესის მხარდაჭერა</h4>
+                    <ul>
+                      <li><a href="#">კომპანიის რეგისტრაცია</a></li>
+                      <li><a href="#">საკადრო საქმისწარმოება</a></li>
+                      <li><a href="#">ხელფასების დარიცხვა (Payroll)</a></li>
+                      <li><a href="#">საგადასახადო დავების მოგვარება</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-column">
+                    <h4>პროგრამული უზრუნველყოფა</h4>
+                    <ul>
+                      <li><a href="#">ERP დანერგვა და ოპტიმიზაცია</a></li>
+                      <li><a href="#">RS.GE ავტომატიზაცია</a></li>
+                      <li><a href="#">ბუღალტერიის ციფრული ტრანსფორმაცია</a></li>
+                      <li>
+                        <a href="#" class="all-services-link"
+                          >ყველა სერვისი →</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item"><a href="#">ჩვენ შესახებ</a></li>
+            <li class="nav-item"><a href="#">სიახლეები</a></li>
+            <li class="nav-item"><a href="#">კონტაქტი</a></li>
+          </ul>
+        </nav>
+
+        <!-- მარჯვენა ინსტრუმენტების ზოლი -->
+        <div class="header-utils">
+          <!-- ძებნის ღილაკი -->
+          <button class="search-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <!-- ენის გადამრთველი (ლინკების სახით) -->
+          <div class="lang-switch">
+            <a href="index.html" class="lang-btn active" data-lang="ka">GE</a>
+            <span>|</span>
+            <a href="en.html" class="lang-btn" data-lang="en">EN</a>
+            <span>|</span>
+            <a href="ru.html" class="lang-btn" data-lang="ru">RU</a>
+          </div>
+
+          <!-- სოციალური ქსელები -->
+          <div class="social-links">
+            <a
+              href="https://t.me/yourusername"
+              class="social-link telegram"
+              aria-label="Telegram"
+              target="_blank"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a
+              href="https://wa.me/9955XXXXXXXX"
+              class="social-link whatsapp"
+              aria-label="WhatsApp"
+              target="_blank"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ფუტერი -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- პირველი სვეტი: ლოგო და აღწერა -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">NETWORKER</a>
+          <p class="footer-desc">
+            პროფესიონალური საბუღალტრო და ფინანსური მომსახურება თქვენი ბიზნესის
+            წარმატებისთვის.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://t.me/yourusername"
+              class="footer-social-link"
+              target="_blank"
+              aria-label="Telegram"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a
+              href="https://wa.me/9955XXXXXXXX"
+              class="footer-social-link"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              class="footer-social-link"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- მეორე სვეტი: სერვისები -->
+        <div class="footer-col">
+          <h4>სერვისები</h4>
+          <ul class="footer-links">
+            <li><a href="#">საბუღალტრო აღრიცხვა</a></li>
+            <li><a href="#">საგადასახადო კონსულტაცია</a></li>
+            <li><a href="#">კომპანიის რეგისტრაცია</a></li>
+            <li><a href="#">აუდიტი და ფინანსები</a></li>
+          </ul>
+        </div>
+
+        <!-- მესამე სვეტი: ნავიგაცია -->
+        <div class="footer-col">
+          <h4>ნავიგაცია</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="#">ჩვენ შესახებ</a></li>
+            <li><a href="#">სიახლეები</a></li>
+            <li><a href="#">კონტაქტი</a></li>
+          </ul>
+        </div>
+
+        <!-- მეოთხე სვეტი: კონტაქტი -->
+        <div class="footer-col">
+          <h4>კონტაქტი</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa-solid fa-location-dot"></i> თბილისი, საქართველო
+            </li>
+            <li><i class="fa-solid fa-phone"></i> +995 (5XX) XX XX XX</li>
+            <li><i class="fa-solid fa-envelope"></i> info@networker.ge</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ქვედა ზოლი (Copyright) -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p>© 2026 NETWORKER. ყველა უფლება დაცულია.</p>
+          <div class="footer-bottom-links">
+            <a href="#">კონფიდენციალურობის პოლიტიკა</a>
+            <a href="#">მომსახურების პირობები</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

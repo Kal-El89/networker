@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+/* ჰედერის გარეთა ზოლი */
+.site-header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #edf2f7;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Legalese-ის სტილის კონტეინერი (70px პადინგით) */
+.header-container {
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ლოგო */
+.logo a {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a202c;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* მობილურის მენიუს ღილაკი */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+/* ნავიგაციის მენიუ */
+.main-nav {
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-item > a:hover {
+  color: #3182ce;
+}
+
+.nav-arrow {
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.has-mega-menu:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* MEGA MENU */
+.has-mega-menu {
+  position: static;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #edf2f7;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.has-mega-menu:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 35px 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.mega-column h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.mega-column ul {
+  list-style: none;
+}
+
+.mega-column ul li {
+  margin-bottom: 10px;
+}
+
+.mega-column ul li a {
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.mega-column ul li a:hover {
+  color: #3182ce;
+  transform: translateX(4px);
+}
+
+.all-services-link {
+  font-weight: 700;
+  color: #3182ce !important;
+}
+
+/* მარჯვენა ინსტრუმენტების ზოლი */
+.header-utils {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #4a5568;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-btn:hover {
+  color: #3182ce;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5e0;
+}
+
+/* ენის ღილაკები-ლინკები */
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: #1a202c;
+  font-weight: 800;
+}
+
+/* სოციალური ქსელები */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f7fafc;
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link.telegram:hover {
+  background-color: #0088cc;
+  color: #ffffff;
+  border-color: #0088cc;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
+.social-link.whatsapp:hover {
+  background-color: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.social-link:active {
+  transform: translateY(-1px) scale(0.95);
+}
+
+/* RESPONSIVE (მობილურის ადაპტაცია) */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 0 24px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf2f7;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    display: none;
+    height: auto;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-item > a {
+    padding: 15px 25px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mega-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    display: none;
+    background-color: #f8fafc;
+  }
+
+  .has-mega-menu.open .mega-menu {
+    display: block;
+  }
+
+  .mega-menu-content {
+    grid-template-columns: 1fr;
+    padding: 15px 25px;
+    gap: 20px;
+  }
+
+  .social-links {
+    display: none;
+  }
+}
+
+/* ფუტერის ზოგადი სტილი */
+.site-footer {
+  background-color: #1a202c;
+  color: #cbd5e0;
+  padding-top: 70px;
+  margin-top: 100px;
+  border-top: 1px solid #2d3748;
+}
+
+/* ფუტერის კონტეინერი (იმავე 70px პადინგით, რაც ჰედერს აქვს) */
+.footer-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 70px 50px 70px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* სვეტები */
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ბრენდის სვეტი */
+.footer-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #a0aec0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* სოციალური ქსელები ფუტერში */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #2d3748;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.footer-social-link:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+/* ლინკების სიები */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+  color: #ffffff;
+}
+
+/* საკონტაქტო ინფორმაცია */
+.footer-contact-info {
+  list-style: none;
+}
+
+.footer-contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #a0aec0;
+  margin-bottom: 12px;
+}
+
+.footer-contact-info li i {
+  color: #3182ce;
+  font-size: 15px;
+}
+
+/* ფუტერის ქვედა ზოლი (Copyright) */
+.footer-bottom {
+  border-top: 1px solid #2d3748;
+  background-color: #111827;
+  padding: 20px 0;
+}
+
+.footer-bottom-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #718096;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: #718096;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: #cbd5e0;
+}
+
+/* რესპონსივი (მობილურისთვის) */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 24px 40px 24px;
+    gap: 30px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 24px;
+  }
+}
