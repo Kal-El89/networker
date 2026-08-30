@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NETWORKER - English</title>
+    <title>NETWORKER - Accounting & Business Services</title>
     <!-- FontAwesome იკონები -->
     <link
       rel="stylesheet"
@@ -29,52 +29,45 @@
           <ul class="nav-list">
             <li class="nav-item"><a href="en.html">Home</a></li>
 
-            <!-- MEGA MENU ELEMENT -->
+            <!-- SERVICES MEGA MENU -->
             <li class="nav-item has-mega-menu">
-              <a href="#"
+              <a href="#services"
                 >Services <i class="fa-solid fa-chevron-down nav-arrow"></i
               ></a>
-
               <div class="mega-menu">
                 <div class="mega-menu-content">
-                  <div class="mega-column">
-                    <h4>Accounting</h4>
-                    <ul>
-                      <li><a href="#">Full Accounting Services</a></li>
-                      <li><a href="#">Tax Reporting</a></li>
-                      <li><a href="#">Period Restorations</a></li>
-                      <li><a href="#">Chief Accountant Services</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>Financial Consulting</h4>
-                    <ul>
-                      <li><a href="#">Tax Optimization</a></li>
-                      <li><a href="#">Financial Audit</a></li>
-                      <li><a href="#">Budgeting & Planning</a></li>
-                      <li><a href="#">IFRS Compliance</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>Business Support</h4>
-                    <ul>
-                      <li><a href="#">Company Registration</a></li>
-                      <li><a href="#">HR & Payroll</a></li>
-                      <li><a href="#">Payroll Calculation</a></li>
-                      <li><a href="#">Tax Dispute Resolution</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>Software Solutions</h4>
-                    <ul>
-                      <li><a href="#">ERP Implementation</a></li>
-                      <li><a href="#">RS.GE Automation</a></li>
-                      <li><a href="#">Digital Transformation</a></li>
+                  <div class="mega-column" style="grid-column: span 12">
+                    <h4>Our Core Services</h4>
+                    <ul class="services-dropdown-list">
                       <li>
-                        <a href="#" class="all-services-link">All Services →</a>
+                        <a href="#services"
+                          ><i class="fa-solid fa-building"></i> Company
+                          Registration</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-user-tie"></i> Individual
+                          Entrepreneur (Small Business)</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-laptop-code"></i> IT Company
+                          Registration in Virtual Zone</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-calculator"></i> Full
+                          Accounting Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-chart-line"></i> CFO (Chief
+                          Financial Officer) Services</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -82,20 +75,14 @@
               </div>
             </li>
 
-            <li class="nav-item"><a href="#">About Us</a></li>
-            <li class="nav-item"><a href="#">News</a></li>
-            <li class="nav-item"><a href="#">Contact</a></li>
+            <li class="nav-item"><a href="#about">About Us</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <!-- მარჯვენა ინსტრუმენტების ზოლი -->
         <div class="header-utils">
-          <!-- ძებნის ღილაკი -->
-          <button class="search-btn" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-
-          <!-- ენის გადამრთველი (აქ EN არის active) -->
+          <!-- ენის გადამრთველი -->
           <div class="lang-switch">
             <a href="index.html" class="lang-btn" data-lang="ka">GE</a>
             <span>|</span>
@@ -109,85 +96,137 @@
             <a
               href="https://t.me/yourusername"
               class="social-link telegram"
-              aria-label="Telegram"
               target="_blank"
-            >
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
+              ><i class="fa-solid fa-paper-plane"></i
+            ></a>
             <a
               href="https://wa.me/9955XXXXXXXX"
               class="social-link whatsapp"
-              aria-label="WhatsApp"
               target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
       </div>
     </header>
-    <!-- English Footer -->
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            Business Starts with Clarity, <br /><span
+              >Finances with Professionals.</span
+            >
+          </h1>
+          <p>
+            Company registration, small business status, virtual zone IT
+            companies, full accounting, and strategic CFO management in one
+            place.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn-primary">Explore Services</a>
+            <a href="#contact" class="btn-secondary">Request Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Modern and fast services to support your business growth</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>Company Registration</h3>
+            <p>
+              Fast LLC registration complying with all legal procedures, tax
+              office registration, and bank account opening assistance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Individual Entrepreneur</h3>
+            <p>
+              IE registration and prompt acquisition of small business status
+              for optimal tax efficiency.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Virtual Zone IT Company</h3>
+            <p>
+              International company status setup and virtual zone privileges,
+              maximizing tax benefits for tech businesses.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3>Full Accounting Services</h3>
+            <p>
+              Day-to-day bookkeeping, tax declaration preparation and
+              submission, financial control, and full legal compliance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>CFO Services</h3>
+            <p>
+              Cash flow management, budgeting, strategic planning, and decision
+              support from an experienced financial director.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-container">
-        <!-- Column 1: Brand & Description -->
         <div class="footer-col footer-brand">
           <a href="en.html" class="footer-logo">NETWORKER</a>
           <p class="footer-desc">
-            Professional accounting and financial services for your business
+            Professional accounting and consulting services for your business
             success.
           </p>
-          <div class="footer-social">
-            <a
-              href="https://t.me/yourusername"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="Telegram"
-            >
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
-            <a
-              href="https://wa.me/9955XXXXXXXX"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="WhatsApp"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a
-              href="https://facebook.com"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </div>
         </div>
 
-        <!-- Column 2: Services -->
         <div class="footer-col">
           <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="#">Accounting Services</a></li>
-            <li><a href="#">Tax Consulting</a></li>
-            <li><a href="#">Company Registration</a></li>
-            <li><a href="#">Audit & Finance</a></li>
+            <li><a href="#services">Company Registration</a></li>
+            <li><a href="#services">IE & Small Business</a></li>
+            <li><a href="#services">IT Company Setup</a></li>
+            <li><a href="#services">Full Accounting</a></li>
+            <li><a href="#services">CFO Services</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Navigation -->
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul class="footer-links">
             <li><a href="en.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Contact -->
-        <div class="footer-col">
+        <div class="footer-col" id="contact">
           <h4>Contact</h4>
           <ul class="footer-contact-info">
             <li><i class="fa-solid fa-location-dot"></i> Tbilisi, Georgia</li>
@@ -197,15 +236,8 @@
         </div>
       </div>
 
-      <!-- Bottom Bar (Copyright) -->
       <div class="footer-bottom">
-        <div class="footer-bottom-container">
-          <p>© 2026 NETWORKER. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
+        <p>© 2026 NETWORKER. All rights reserved.</p>
       </div>
     </footer>
     <script src="script.js"></script>

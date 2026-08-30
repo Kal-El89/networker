@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NETWORKER</title>
+    <title>NETWORKER - საბუღალტრო და საბიზნესო სერვისები</title>
     <!-- FontAwesome იკონები -->
     <link
       rel="stylesheet"
@@ -29,53 +29,44 @@
           <ul class="nav-list">
             <li class="nav-item"><a href="index.html">მთავარი</a></li>
 
-            <!-- MEGA MENU ELEMENT -->
+            <!-- SERVICES MEGA MENU -->
             <li class="nav-item has-mega-menu">
-              <a href="#"
+              <a href="#services"
                 >სერვისები <i class="fa-solid fa-chevron-down nav-arrow"></i
               ></a>
-
               <div class="mega-menu">
                 <div class="mega-menu-content">
-                  <div class="mega-column">
-                    <h4>საბუღალტრო აღრიცხვა</h4>
-                    <ul>
-                      <li><a href="#">სრული საბუღალტრო მომსახურება</a></li>
-                      <li><a href="#">საგადასახადო ანგარიშგება</a></li>
-                      <li><a href="#">ძველი პერიოდების აღდგენა</a></li>
-                      <li><a href="#">მთავარი ბუღალტრის მომსახურება</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>ფინანსური კონსულტაცია</h4>
-                    <ul>
-                      <li><a href="#">საგადასახადო ოპტიმიზაცია</a></li>
-                      <li><a href="#">ფინანსური აუდიტი</a></li>
-                      <li><a href="#">ბიუჯეტირება და დაგეგმარება</a></li>
-                      <li><a href="#">IFRS სტანდარტებთან შესაბამისობა</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>ბიზნესის მხარდაჭერა</h4>
-                    <ul>
-                      <li><a href="#">კომპანიის რეგისტრაცია</a></li>
-                      <li><a href="#">საკადრო საქმისწარმოება</a></li>
-                      <li><a href="#">ხელფასების დარიცხვა (Payroll)</a></li>
-                      <li><a href="#">საგადასახადო დავების მოგვარება</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="mega-column">
-                    <h4>პროგრამული უზრუნველყოფა</h4>
-                    <ul>
-                      <li><a href="#">ERP დანერგვა და ოპტიმიზაცია</a></li>
-                      <li><a href="#">RS.GE ავტომატიზაცია</a></li>
-                      <li><a href="#">ბუღალტერიის ციფრული ტრანსფორმაცია</a></li>
+                  <div class="mega-column" style="grid-column: span 4">
+                    <h4>ჩვენი ძირითადი სერვისები</h4>
+                    <ul class="services-dropdown-list">
                       <li>
-                        <a href="#" class="all-services-link"
-                          >ყველა სერვისი →</a
+                        <a href="#services"
+                          ><i class="fa-solid fa-building"></i> კომპანიის
+                          რეგისტრაცია</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-user-tie"></i> ინდ. მეწარმის
+                          რეგისტრაცია (მცირე ბიზნესი)</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-laptop-code"></i> ვირტუალურ
+                          ზონაში IT კომპანიის რეგისტრაცია</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-calculator"></i> სრული
+                          ბუღალტერია</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services"
+                          ><i class="fa-solid fa-chart-line"></i> CFO (ფინანსური
+                          დირექტორი მომსახურებაში)</a
                         >
                       </li>
                     </ul>
@@ -84,20 +75,14 @@
               </div>
             </li>
 
-            <li class="nav-item"><a href="#">ჩვენ შესახებ</a></li>
-            <li class="nav-item"><a href="#">სიახლეები</a></li>
-            <li class="nav-item"><a href="#">კონტაქტი</a></li>
+            <li class="nav-item"><a href="#about">ჩვენ შესახებ</a></li>
+            <li class="nav-item"><a href="#contact">კონტაქტი</a></li>
           </ul>
         </nav>
 
         <!-- მარჯვენა ინსტრუმენტების ზოლი -->
         <div class="header-utils">
-          <!-- ძებნის ღილაკი -->
-          <button class="search-btn" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-
-          <!-- ენის გადამრთველი (ლინკების სახით) -->
+          <!-- ენის გადამრთველი -->
           <div class="lang-switch">
             <a href="index.html" class="lang-btn active" data-lang="ka">GE</a>
             <span>|</span>
@@ -111,85 +96,144 @@
             <a
               href="https://t.me/yourusername"
               class="social-link telegram"
-              aria-label="Telegram"
               target="_blank"
-            >
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
+              ><i class="fa-solid fa-paper-plane"></i
+            ></a>
             <a
               href="https://wa.me/9955XXXXXXXX"
               class="social-link whatsapp"
-              aria-label="WhatsApp"
               target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- HERO SECTION (მთავარი ეკრანი) -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            ბიზნესი იწყება სიცხადით, <br /><span
+              >ფინანსები — პროფესიონალებით.</span
+            >
+          </h1>
+          <p>
+            კომპანიის რეგისტრაცია, მცირე ბიზნესის სტატუსი, ვირტუალური ზონის IT
+            კომპანიები, სრული ბუღალტერია და CFO სტრატეგიული მართვა ერთ სივრცეში.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn-primary">გაიგე მეტი სერვისებზე</a>
+            <a href="#contact" class="btn-secondary">მოითხოვე კონსულტაცია</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION (მომსახურებები ერთგვერდიან საიტზე) -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        <div class="section-title">
+          <h2>ჩვენი მომსახურება</h2>
+          <p>თანამედროვე და სწრაფი სერვისები თქვენი ბიზნესის მხარდასაჭერად</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- სერვისი 1 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>კომპანიის რეგისტრაცია</h3>
+            <p>
+              შპს-ს სწრაფი რეგისტრაცია ყველა საჭირო იურიდიული პროცედურის დაცვით,
+              საგადასახადო ბაზაში რეგისტრაცია და საბანკო ანგარიშის გახსნა.
+            </p>
+          </div>
+
+          <!-- სერვისი 2 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>ინდ. მეწარმის რეგისტრაცია</h3>
+            <p>
+              ინდივიდუალური მეწარმის (ინდ. მეწარმე) რეგისტრაცია და მცირე
+              ბიზნესის სტატუსის ოპერატიული მინიჭება გადასახადების
+              ოპტიმიზაციისთვის.
+            </p>
+          </div>
+
+          <!-- სერვისი 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>ვირტუალურ ზონაში IT კომპანიის რეგისტრაცია</h3>
+            <p>
+              საერთაშორისო კომპანიის სტატუსისა და ვირტუალური ზონის
+              უპირატესობებით სარგებლობა, ტექნოლოგიური ბიზნესებისთვის
+              საგადასახადო შეღავათებით.
+            </p>
+          </div>
+
+          <!-- სერვისი 4 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3>სრული ბუღალტერია</h3>
+            <p>
+              ყოველდღიური საბუღალტრო აღრიცხვა, საგადასახადო დეკლარაციების
+              მომზადება და ჩაბარება, ფინანსური კონტროლი და სრული შესაბამისობა
+              კანონმდებლობასთან.
+            </p>
+          </div>
+
+          <!-- სერვისი 5: CFO -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>CFO სერვისი (ფინანსური დირექტორი)</h3>
+            <p>
+              ფინანსური ნაკადების მართვა, ბიუჯეტირება, სტრატეგიული დაგეგმარება
+              და გადაწყვეტილებების მხარდაჭერა გამოცდილი ფინანსური დირექტორისგან.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ფუტერი -->
     <footer class="site-footer">
       <div class="footer-container">
-        <!-- პირველი სვეტი: ლოგო და აღწერა -->
         <div class="footer-col footer-brand">
           <a href="index.html" class="footer-logo">NETWORKER</a>
           <p class="footer-desc">
-            პროფესიონალური საბუღალტრო და ფინანსური მომსახურება თქვენი ბიზნესის
-            წარმატებისთვის.
+            პროფესიონალური საბუღალტრო და საკონსულტაციო მომსახურება თქვენი
+            ბიზნესის წარმატებისთვის.
           </p>
-          <div class="footer-social">
-            <a
-              href="https://t.me/yourusername"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="Telegram"
-            >
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
-            <a
-              href="https://wa.me/9955XXXXXXXX"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="WhatsApp"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a
-              href="https://facebook.com"
-              class="footer-social-link"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </div>
         </div>
 
-        <!-- მეორე სვეტი: სერვისები -->
         <div class="footer-col">
           <h4>სერვისები</h4>
           <ul class="footer-links">
-            <li><a href="#">საბუღალტრო აღრიცხვა</a></li>
-            <li><a href="#">საგადასახადო კონსულტაცია</a></li>
-            <li><a href="#">კომპანიის რეგისტრაცია</a></li>
-            <li><a href="#">აუდიტი და ფინანსები</a></li>
+            <li><a href="#services">კომპანიის რეგისტრაცია</a></li>
+            <li><a href="#services">ინდ. მეწარმე / მცირე ბიზნესი</a></li>
+            <li><a href="#services">IT კომპანიის რეგისტრაცია</a></li>
+            <li><a href="#services">სრული ბუღალტერია</a></li>
+            <li><a href="#services">CFO ფინანსური დირექტორი</a></li>
           </ul>
         </div>
 
-        <!-- მესამე სვეტი: ნავიგაცია -->
         <div class="footer-col">
           <h4>ნავიგაცია</h4>
           <ul class="footer-links">
             <li><a href="index.html">მთავარი</a></li>
-            <li><a href="#">ჩვენ შესახებ</a></li>
-            <li><a href="#">სიახლეები</a></li>
-            <li><a href="#">კონტაქტი</a></li>
+            <li><a href="#services">სერვისები</a></li>
+            <li><a href="#contact">კონტაქტი</a></li>
           </ul>
         </div>
 
-        <!-- მეოთხე სვეტი: კონტაქტი -->
-        <div class="footer-col">
+        <div class="footer-col" id="contact">
           <h4>კონტაქტი</h4>
           <ul class="footer-contact-info">
             <li>
@@ -201,14 +245,9 @@
         </div>
       </div>
 
-      <!-- ქვედა ზოლი (Copyright) -->
       <div class="footer-bottom">
         <div class="footer-bottom-container">
           <p>© 2026 NETWORKER. ყველა უფლება დაცულია.</p>
-          <div class="footer-bottom-links">
-            <a href="#">კონფიდენციალურობის პოლიტიკა</a>
-            <a href="#">მომსახურების პირობები</a>
-          </div>
         </div>
       </div>
     </footer>
