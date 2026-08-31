@@ -1,8 +1,10 @@
-/* ძირითადი ცვლადები და სტილები */
+/* ძირითადი ცვლადები და სტილები (მორგებული ლოგოს ლურჯ ფერებზე) */
 :root {
-  --primary-color: #1e293b;
-  --accent-color: #2563eb;
-  --accent-hover: #1d4ed8;
+  --primary-color: #0b192c;
+  --accent-color: #1e3d59;
+  --accent-hover: #172554;
+  --brand-blue: #2563eb;
+  --brand-dark-blue: #0f172a;
   --text-color: #334155;
   --bg-light: #f8fafc;
   --white: #ffffff;
@@ -39,38 +41,37 @@ ul {
   z-index: 1000;
   background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  height: 80px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* ლოგოს სურათის სტილი ჰედერსა და ფუტერში */
 .logo a {
   display: flex;
   align-items: center;
 }
 
 .logo-img {
-  height: 45px;
+  height: 50px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 
 .footer-logo-img {
-  height: 40px;
+  height: 45px;
   width: auto;
   display: block;
   margin-bottom: 15px;
-  filter: brightness(0) invert(1); /* ათეთრებს მუქ ფონზე დასაჯდომად, თუ საჭიროა */
+  filter: brightness(0) invert(1);
   object-fit: contain;
 }
 
@@ -91,7 +92,7 @@ ul {
 }
 
 .nav-item > a:hover {
-  color: var(--accent-color);
+  color: var(--brand-blue);
 }
 
 .nav-arrow {
@@ -106,12 +107,12 @@ ul {
 
 .mega-menu {
   position: absolute;
-  top: 80px;
+  top: 85px;
   left: 0;
   width: 100%;
   background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
@@ -130,30 +131,30 @@ ul {
 .mega-menu-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 35px 20px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
 .mega-column h4 {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--primary-color);
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 5px;
+  border-bottom: 2px solid var(--brand-blue);
+  padding-bottom: 8px;
   display: inline-block;
 }
 
 .services-dropdown-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 20px;
+  gap: 15px 25px;
 }
 
 .services-dropdown-list li a {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
@@ -161,13 +162,13 @@ ul {
 }
 
 .services-dropdown-list li a i {
-  color: var(--accent-color);
-  width: 20px;
+  color: var(--brand-blue);
+  width: 22px;
 }
 
 .services-dropdown-list li a:hover {
-  color: var(--accent-color);
-  transform: translateX(4px);
+  color: var(--brand-blue);
+  transform: translateX(5px);
 }
 
 /* HEADER UTILS */
@@ -177,22 +178,34 @@ ul {
   gap: 20px;
 }
 
-.lang-switch {
+/* გაალამაზებული ენების გადართვის ღილაკები */
+.lang-switch-modern {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 600;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3px;
+  gap: 2px;
 }
 
-.lang-btn {
+.lang-pill {
+  font-size: 13px;
+  font-weight: 600;
   color: #64748b;
+  padding: 4px 10px;
+  border-radius: 15px;
   transition: var(--transition);
 }
 
-.lang-btn.active,
-.lang-btn:hover {
-  color: var(--accent-color);
+.lang-pill:hover {
+  color: var(--brand-blue);
+}
+
+.lang-pill.active {
+  background-color: var(--brand-blue);
+  color: var(--white);
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.3);
 }
 
 .social-links {
@@ -235,32 +248,34 @@ ul {
 
 /* HERO SECTION */
 .hero-section {
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  padding: 100px 20px;
+  background: linear-gradient(135deg, #0b192c 0%, #1e3d59 100%);
+  padding: 120px 20px;
   text-align: center;
+  color: var(--white);
 }
 
 .hero-container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 800;
-  color: var(--primary-color);
+  color: var(--white);
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .hero-content h1 span {
-  color: var(--accent-color);
+  color: #60a5fa;
 }
 
 .hero-content p {
-  font-size: 18px;
-  color: #475569;
-  margin-bottom: 35px;
+  font-size: 19px;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .hero-buttons {
@@ -271,35 +286,39 @@ ul {
 
 .btn-primary,
 .btn-secondary {
-  padding: 14px 28px;
-  border-radius: 6px;
+  padding: 14px 30px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 15px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
+  background-color: var(--brand-blue);
   color: var(--white);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-hover);
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: var(--white);
-  color: var(--primary-color);
-  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary:hover {
-  border-color: var(--primary-color);
+  border-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* SERVICES SECTION */
+/* SERVICES SECTION (5 სერვისისთვის მორგებული ბადე) */
 .services-section {
-  padding: 90px 20px;
+  padding: 100px 20px;
   background-color: var(--white);
 }
 
@@ -314,10 +333,10 @@ ul {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .section-title p {
@@ -331,30 +350,42 @@ ul {
   gap: 30px;
 }
 
+.services-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* მე-4 და მე-5 ბარათის ცენტრირება ქვედა რიგში */
+.services-grid-5 .service-card:nth-child(4) {
+  grid-column: 1 / span 1;
+  /* ალტერნატიული ლამაზი განლაგებისთვის დესკტოპზე */
+}
+
 .service-card {
   background: var(--bg-light);
   border: 1px solid var(--border-color);
   padding: 40px 30px;
-  border-radius: 12px;
+  border-radius: 14px;
   transition: var(--transition);
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-color: var(--accent-color);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(11, 25, 44, 0.08);
+  border-color: var(--brand-blue);
 }
 
 .service-icon {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background-color: rgba(37, 99, 235, 0.1);
-  color: var(--accent-color);
+  color: var(--brand-blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  font-size: 24px;
+  border-radius: 12px;
+  font-size: 26px;
   margin-bottom: 25px;
 }
 
@@ -368,29 +399,62 @@ ul {
 .service-card p {
   color: #64748b;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* ABOUT SECTION STYLES */
+/* ABOUT SECTION */
 .about-section {
-  padding: 90px 20px;
-  background-color: var(--bg-light);
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  background: var(--white);
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
   text-align: center;
+  position: relative;
+}
+
+.about-content::before {
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  background: var(--brand-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.about-content p {
   font-size: 18px;
   color: #475569;
   line-height: 1.8;
 }
 
-/* CONTACT SECTION STYLES */
+.about-content strong {
+  color: var(--primary-color);
+}
+
+/* CONTACT SECTION */
 .contact-section {
-  padding: 90px 20px;
+  padding: 100px 20px;
   background-color: var(--white);
 }
 
@@ -398,33 +462,75 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .contact-info-card {
   background: var(--bg-light);
   border: 1px solid var(--border-color);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 40px 30px;
+  border-radius: 14px;
   text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-link {
+  color: var(--brand-blue);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
   transition: var(--transition);
 }
 
 .contact-info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-color: var(--accent-color);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(11, 25, 44, 0.08);
+  border-color: var(--brand-blue);
+  background-color: var(--white);
+}
+
+.contact-info-card:hover::after {
+  background-color: var(--brand-blue);
 }
 
 .contact-info-card i {
-  font-size: 28px;
-  color: var(--accent-color);
-  margin-bottom: 15px;
+  font-size: 32px;
+  color: var(--brand-blue);
+  margin-bottom: 20px;
+  background: rgba(37, 99, 235, 0.1);
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover i {
+  background: var(--brand-blue);
+  color: var(--white);
+  transform: scale(1.05);
 }
 
 .contact-info-card h3 {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 10px;
@@ -433,13 +539,14 @@ ul {
 .contact-info-card p {
   color: #64748b;
   font-size: 15px;
+  font-weight: 500;
 }
 
 /* FOOTER */
 .site-footer {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 70px 20px 20px;
+  padding: 80px 20px 20px;
 }
 
 .footer-container {
@@ -454,6 +561,7 @@ ul {
 .footer-desc {
   color: #94a3b8;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .footer-col h4 {
@@ -477,7 +585,7 @@ ul {
 
 .footer-links a:hover {
   color: var(--white);
-  padding-left: 4px;
+  padding-left: 5px;
 }
 
 .footer-contact-info li {
@@ -487,13 +595,13 @@ ul {
 }
 
 .footer-contact-info i {
-  color: var(--accent-color);
+  color: var(--brand-blue);
 }
 
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   color: #94a3b8;
@@ -505,7 +613,7 @@ ul {
   .main-nav {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 85px;
     left: 0;
     width: 100%;
     background-color: var(--white);
@@ -542,6 +650,7 @@ ul {
   }
 
   .services-grid,
+  .services-grid-5,
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -553,6 +662,7 @@ ul {
 
 @media (max-width: 768px) {
   .services-grid,
+  .services-grid-5,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -568,5 +678,9 @@ ul {
 
   .hero-buttons {
     flex-direction: column;
+  }
+
+  .about-content {
+    padding: 30px 20px;
   }
 }

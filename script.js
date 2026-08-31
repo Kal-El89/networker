@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // მობილური მენიუს გახსნა/დახურვა
-  const mobileToggle = document.querySelector(".mobile-menu-toggle");
-  const mainNav = document.querySelector(".main-nav");
+  // მობილური მენიუს თაიგლი (Toggle)
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
 
-  if (mobileToggle && mainNav) {
-    mobileToggle.addEventListener("click", () => {
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
       mainNav.classList.toggle("active");
-      const icon = mobileToggle.querySelector("i");
+      const icon = menuToggle.querySelector("i");
       if (mainNav.classList.contains("active")) {
         icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+        icon.classList.add("fa-times");
       } else {
-        icon.classList.remove("fa-xmark");
+        icon.classList.remove("fa-times");
         icon.classList.add("fa-bars");
       }
     });
   }
 
-  // გლუვი სქროლი (Smooth Scroll) ნავიგაციის ლინკებისთვის
+  // სმუზ სქროლი (Smooth scrolling) შიდა ლინკებისთვის
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
@@ -26,18 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-
-        // თუ მობილური მენიუ ღიაა, დავხუროთ ლინკზე კლიკისას
         if (mainNav.classList.contains("active")) {
           mainNav.classList.remove("active");
-          const icon = mobileToggle.querySelector("i");
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
+          const icon = menuToggle.querySelector("i");
+          if (icon) {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          }
         }
-
         targetElement.scrollIntoView({
           behavior: "smooth",
-          block: "start",
         });
       }
     });
