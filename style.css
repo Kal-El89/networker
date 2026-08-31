@@ -52,11 +52,26 @@ ul {
   justify-content: space-between;
 }
 
+/* ლოგოს სურათის სტილი ჰედერსა და ფუტერში */
 .logo a {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--primary-color);
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin-bottom: 15px;
+  filter: brightness(0) invert(1); /* ათეთრებს მუქ ფონზე დასაჯდომად, თუ საჭიროა */
+  object-fit: contain;
 }
 
 .main-nav .nav-list {
@@ -310,16 +325,10 @@ ul {
   font-size: 16px;
 }
 
-/* 5 სერვისის ზუსტი და ლამაზი განაწილება Grid-ით */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-}
-
-/* მე-4 და მე-5 ბარათი რომ გავანაწილოთ სიმეტრიულად მეორე ხაზზე */
-.services-grid .service-card:nth-child(4) {
-  grid-column: 1 / span 1; /* ან შეიძლება ცენტრში განთავსება, მაგრამ 3-იანი ბადისთვის ქვემოთ 2 ელემენტი ავტომატურად გვერდიგვერდ დადგება თუ მარცხნიდან გავანაწილებთ */
 }
 
 .service-card {
@@ -362,6 +371,70 @@ ul {
   line-height: 1.5;
 }
 
+/* ABOUT SECTION STYLES */
+.about-section {
+  padding: 90px 20px;
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* CONTACT SECTION STYLES */
+.contact-section {
+  padding: 90px 20px;
+  background-color: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-color: var(--accent-color);
+}
+
+.contact-info-card i {
+  font-size: 28px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.contact-info-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contact-info-card p {
+  color: #64748b;
+  font-size: 15px;
+}
+
 /* FOOTER */
 .site-footer {
   background-color: var(--primary-color);
@@ -376,14 +449,6 @@ ul {
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
   margin-bottom: 50px;
-}
-
-.footer-logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--white);
-  display: inline-block;
-  margin-bottom: 15px;
 }
 
 .footer-desc {
@@ -476,7 +541,8 @@ ul {
     display: block;
   }
 
-  .services-grid {
+  .services-grid,
+  .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -486,7 +552,8 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .services-grid {
+  .services-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
