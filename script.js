@@ -17,6 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ენების გადართვის გლუვი და პლავური ეფექტი (ეკრანის გათეთრების გარეშე)
+  const langPills = document.querySelectorAll(".lang-pill");
+  langPills.forEach(pill => {
+    pill.addEventListener("click", function(e) {
+      if (this.classList.contains("active")) return;
+      e.preventDefault();
+      const targetUrl = this.getAttribute("href");
+
+      // აქტიური კლასის გლუვი გადატანა და ანიმაცია
+      langPills.forEach(p => p.classList.remove("active"));
+      this.classList.add("active");
+
+      // მცირე შეყოვნება (200მწმ) პლავური განათების გამოსაჩენად და შემდეგ გადასვლა
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 200);
+    });
+  });
+
   // სმუზ სქროლი (Smooth scrolling) შიდა ლინკებისთვის
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

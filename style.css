@@ -178,7 +178,7 @@ ul {
   gap: 20px;
 }
 
-/* გაალამაზებული ენების გადართვის ღილაკები */
+/* გაალამაზებული და ანიმაციური ენების გადართვის ღილაკები პლავური გადასვლით */
 .lang-switch-modern {
   display: flex;
   align-items: center;
@@ -187,6 +187,12 @@ ul {
   border-radius: 20px;
   padding: 3px;
   gap: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-switch-modern:hover {
+  border-color: var(--brand-blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 
 .lang-pill {
@@ -195,46 +201,83 @@ ul {
   color: #64748b;
   padding: 4px 10px;
   border-radius: 15px;
-  transition: var(--transition);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .lang-pill:hover {
   color: var(--brand-blue);
+  background-color: rgba(37, 99, 235, 0.08);
+  transform: translateY(-1px);
 }
 
 .lang-pill.active {
   background-color: var(--brand-blue);
   color: var(--white);
-  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+  transform: scale(1.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* SOCIAL LINKS & HEADER BRANDING ICONS */
 .social-links {
   display: flex;
   gap: 10px;
 }
 
 .social-link {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-size: 15px;
-  transition: var(--transition);
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  position: relative;
 }
 
 .social-link.telegram {
-  background-color: #229ed9;
+  background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
 }
+
 .social-link.whatsapp {
-  background-color: #25d366;
+  background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
 }
 
 .social-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link.telegram:hover {
+  background: linear-gradient(135deg, #32bcf9 0%, #229ed9 100%);
+}
+
+.social-link.whatsapp:hover {
+  background: linear-gradient(135deg, #2de670 0%, #25d366 100%);
+}
+
+/* CONTACT SECTION CARDS ICON POLISH */
+.contact-info-card.telegram-card i {
+  background: linear-gradient(135deg, rgba(34, 158, 217, 0.15), rgba(34, 158, 217, 0.05));
+  color: #229ed9;
+}
+.contact-info-card.telegram-card:hover i {
+  background: #229ed9;
+  color: var(--white);
+}
+
+.contact-info-card.whatsapp-card i {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(37, 211, 102, 0.05));
+  color: #25d366;
+}
+.contact-info-card.whatsapp-card:hover i {
+  background: #25d366;
+  color: var(--white);
 }
 
 .mobile-menu-toggle {
@@ -316,7 +359,7 @@ ul {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* SERVICES SECTION (5 სერვისისთვის მორგებული ბადე) */
+/* SERVICES SECTION */
 .services-section {
   padding: 100px 20px;
   background-color: var(--white);
@@ -356,10 +399,8 @@ ul {
   gap: 30px;
 }
 
-/* მე-4 და მე-5 ბარათის ცენტრირება ქვედა რიგში */
 .services-grid-5 .service-card:nth-child(4) {
   grid-column: 1 / span 1;
-  /* ალტერნატიული ლამაზი განლაგებისთვის დესკტოპზე */
 }
 
 .service-card {
