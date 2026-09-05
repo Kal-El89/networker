@@ -178,7 +178,6 @@ ul {
   gap: 20px;
 }
 
-/* გაალამაზებული და ანიმაციური ენების გადართვის ღილაკები პლავური გადასვლით */
 .lang-switch-modern {
   display: flex;
   align-items: center;
@@ -261,7 +260,7 @@ ul {
   background: linear-gradient(135deg, #2de670 0%, #25d366 100%);
 }
 
-/* CONTACT SECTION CARDS ICON POLISH */
+/* CONTACT SECTION CARDS ICON POLISH & BRAND COLORS */
 .contact-info-card.telegram-card i {
   background: linear-gradient(135deg, rgba(34, 158, 217, 0.15), rgba(34, 158, 217, 0.05));
   color: #229ed9;
@@ -277,6 +276,33 @@ ul {
 }
 .contact-info-card.whatsapp-card:hover i {
   background: #25d366;
+  color: var(--white);
+}
+
+.contact-info-card.instagram-card i {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(131, 58, 180, 0.05));
+  color: #e1306c;
+}
+.contact-info-card.instagram-card:hover i {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  color: var(--white);
+}
+
+.contact-info-card.facebook-card i {
+  background: linear-gradient(135deg, rgba(24, 119, 242, 0.15), rgba(24, 119, 242, 0.05));
+  color: #1877f2;
+}
+.contact-info-card.facebook-card:hover i {
+  background: #1877f2;
+  color: var(--white);
+}
+
+.contact-info-card.linkedin-card i {
+  background: linear-gradient(135deg, rgba(10, 102, 194, 0.15), rgba(10, 102, 194, 0.05));
+  color: #0a66c2;
+}
+.contact-info-card.linkedin-card:hover i {
+  background: #0a66c2;
   color: var(--white);
 }
 
@@ -407,7 +433,6 @@ ul {
   border-color: var(--brand-blue);
 }
 
-/* სერვისის იკონკა და ჰოვერზე განათების (glow) ეფექტი */
 .service-icon {
   width: 65px;
   height: 65px;
@@ -486,10 +511,6 @@ ul {
   font-size: 18px;
   color: #475569;
   line-height: 1.8;
-}
-
-.about-content strong {
-  color: var(--primary-color);
 }
 
 /* CONTACT SECTION */
@@ -648,7 +669,6 @@ ul {
   font-size: 13px;
 }
 
-/* რესპონსივ (მობილურისთვის) */
 @media (max-width: 992px) {
   .main-nav {
     display: none;
