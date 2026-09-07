@@ -100,7 +100,7 @@ ul {
   text-align: center;
 }
 
-/* FOOTER BRAND STYLING (გადატანილია მარცხნივ) */
+/* FOOTER BRAND STYLING */
 .footer-brand-container {
   display: flex;
   flex-direction: column;
@@ -281,7 +281,7 @@ ul {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* SOCIAL LINKS & HEADER BRANDING ICONS */
+/* SOCIAL LINKS */
 .social-links {
   display: flex;
   gap: 10px;
@@ -322,7 +322,7 @@ ul {
   background: linear-gradient(135deg, #2de670 0%, #25d366 100%);
 }
 
-/* CONTACT SECTION CARDS ICON POLISH & BRAND COLORS */
+/* CONTACT SECTION CARDS */
 .contact-info-card.telegram-card i {
   background: linear-gradient(
     135deg,
@@ -791,13 +791,28 @@ ul {
     padding: 10px 0;
   }
 
+  /* მობილურ ვერსიაში მეგა მენიუ თავიდან დამალულია და იხსნება მხოლოდ სერვისებზე კლიკზე */
   .mega-menu {
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
     box-shadow: none;
     border: none;
     padding-left: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .has-mega-menu.mobile-open .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    margin-top: 10px;
+  }
+
+  .has-mega-menu.mobile-open .nav-arrow {
+    transform: rotate(180deg);
   }
 
   .mobile-menu-toggle {
@@ -837,7 +852,6 @@ ul {
     padding: 30px 20px;
   }
 
-  /* მობილურზე ჰედერის სოციალური ქსელების დამალვა და ტექსტის დაპატარავება */
   .header-utils .social-links {
     display: none !important;
   }
