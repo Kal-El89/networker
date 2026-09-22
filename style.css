@@ -1,9 +1,10 @@
-/* ძირითადი ცვლადები და სტილები (მორგებული ლოგოს ლურჯ ფერებზე) */
+/* ძირითადი ცვლადები და სტილები (მორგებული ახალი ლოგოს ფერებზე) */
 :root {
   --primary-color: #0b192c;
   --accent-color: #1e3d59;
   --accent-hover: #172554;
   --brand-blue: #2563eb;
+  --brand-green: #10b981;
   --brand-dark-blue: #0f172a;
   --text-color: #334155;
   --bg-light: #f8fafc;
@@ -93,7 +94,13 @@ ul {
 .brand-subtitle {
   font-size: 10px;
   font-weight: 700;
-  color: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-top: 2px;
@@ -130,7 +137,7 @@ ul {
 .footer-brand-subtitle {
   font-size: 9px;
   font-weight: 700;
-  color: #60a5fa;
+  color: #34d399;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-top: 2px;
@@ -202,7 +209,7 @@ ul {
   font-size: 16px;
   margin-bottom: 20px;
   color: var(--primary-color);
-  border-bottom: 2px solid var(--brand-blue);
+  border-bottom: 2px solid var(--brand-green);
   padding-bottom: 8px;
   display: inline-block;
 }
@@ -224,7 +231,7 @@ ul {
 }
 
 .services-dropdown-list li a i {
-  color: var(--brand-blue);
+  color: var(--brand-green);
   width: 22px;
 }
 
@@ -252,8 +259,8 @@ ul {
 }
 
 .lang-switch-modern:hover {
-  border-color: var(--brand-blue);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  border-color: var(--brand-green);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
 }
 
 .lang-pill {
@@ -268,15 +275,19 @@ ul {
 }
 
 .lang-pill:hover {
-  color: var(--brand-blue);
-  background-color: rgba(37, 99, 235, 0.08);
+  color: var(--brand-green);
+  background-color: rgba(16, 185, 129, 0.08);
   transform: translateY(-1px);
 }
 
 .lang-pill.active {
-  background-color: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
   color: var(--white);
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
   transform: scale(1.05);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -312,14 +323,6 @@ ul {
 .social-link:hover {
   transform: translateY(-3px) scale(1.08);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.social-link.telegram:hover {
-  background: linear-gradient(135deg, #32bcf9 0%, #229ed9 100%);
-}
-
-.social-link.whatsapp:hover {
-  background: linear-gradient(135deg, #2de670 0%, #25d366 100%);
 }
 
 /* CONTACT SECTION CARDS */
@@ -432,7 +435,9 @@ ul {
 }
 
 .hero-content h1 span {
-  color: #60a5fa;
+  background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
@@ -459,13 +464,17 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
   color: var(--white);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
+  opacity: 0.9;
   transform: translateY(-2px);
 }
 
@@ -525,14 +534,14 @@ ul {
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(11, 25, 44, 0.08);
-  border-color: var(--brand-blue);
+  border-color: var(--brand-green);
 }
 
 .service-icon {
   width: 65px;
   height: 65px;
-  background-color: rgba(37, 99, 235, 0.1);
-  color: var(--brand-blue);
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--brand-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -543,10 +552,14 @@ ul {
 }
 
 .service-card:hover .service-icon {
-  background-color: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
   color: var(--white);
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 18px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.4);
 }
 
 .service-card h3 {
@@ -592,14 +605,18 @@ ul {
   transform: translateX(-50%);
   width: 45px;
   height: 45px;
-  background: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
   color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
 }
 
 .about-content p {
@@ -634,7 +651,7 @@ ul {
 }
 
 .contact-link {
-  color: var(--brand-blue);
+  color: var(--brand-green);
   font-weight: 600;
   transition: var(--transition);
 }
@@ -657,19 +674,23 @@ ul {
 .contact-info-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(11, 25, 44, 0.08);
-  border-color: var(--brand-blue);
+  border-color: var(--brand-green);
   background-color: var(--white);
 }
 
 .contact-info-card:hover::after {
-  background-color: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
 }
 
 .contact-info-card i {
   font-size: 32px;
-  color: var(--brand-blue);
+  color: var(--brand-green);
   margin-bottom: 20px;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   width: 70px;
   height: 70px;
   display: inline-flex;
@@ -680,7 +701,11 @@ ul {
 }
 
 .contact-info-card:hover i {
-  background: var(--brand-blue);
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 0%,
+    var(--brand-green) 100%
+  );
   color: var(--white);
   transform: scale(1.05);
 }
@@ -751,7 +776,7 @@ ul {
 }
 
 .footer-contact-info i {
-  color: var(--brand-blue);
+  color: var(--brand-green);
 }
 
 .footer-bottom {
@@ -791,7 +816,6 @@ ul {
     padding: 10px 0;
   }
 
-  /* მობილურ ვერსიაში მეგა მენიუ თავიდან დამალულია და იხსნება მხოლოდ სერვისებზე კლიკზე */
   .mega-menu {
     position: static;
     opacity: 0;
